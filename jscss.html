@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+    body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    text-align: center;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+#slider {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.5s ease;
+}
+
+button {
+    margin: 15px 10px 0 10px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="slider_container">
+        <img id="slider" src="" alt="bannerimages"/>
+
+        <div class="buttons">
+            <button onclick="previousPic()">Previous</button>
+            <button onclick="nextPic()">Next</button>
+        </div>
+    </div>
+        <script>
+            let imagecount=0
+            
+            let images=["https://img.freepik.com/premium-photo/diamond-ear-ring-necklace-jewellery_510951-8.jpg?semt=ais_rp_progressive&w=740&q=80",
+            "https://img.freepik.com/premium-photo/ladies-jewellery-necklace-picture-realistic_1270398-3621.jpg?semt=ais_rp_progressive&w=740&q=80",            "https://www.manyavar.com/dw/image/v2/BJZV_PRD/on/demandware.static/-/Library-Sites-ManyavarSharedLibrary/default/dw3253c2aa/Trending%20Designs%20in%20Gold%20for%20Your%20Wedding%20Jewellery%20Ranging%20from%20Mangtika%20to%20Payal_Blog%201.jpg",
+            "https://static.vecteezy.com/system/resources/thumbnails/023/140/237/small/fashionable-premium-designer-ring-jewelry-banner-ai-generated-photo.jpg",
+                
+
+            ]
+            document.getElementById("slider").src = images[imagecount];
+
+        function nextPic() {
+            if (imagecount < images.length - 1) {
+                imagecount++;
+            } else {
+                imagecount = 0;
+                }
+            document.getElementById("slider").src = images[imagecount];
+        }
+
+        function previousPic() {
+            if (imagecount > 0) {
+                imagecount--;
+            } else {
+                imagecount = images.length - 1;
+                 }
+            document.getElementById("slider").src = images[imagecount];
+        }
+        </script>
+    </body>
+</html>

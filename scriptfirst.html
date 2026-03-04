@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        DOCUMENT
+    </title>
+</head>
+
+<body>
+    <script>
+        console.log("hello there")
+        document.write("in the document")
+        //  let age=10;
+        //  age=15;
+        //  const pi=3.14;
+        //  console.log("age:"+age);
+        //  console.log("pi value:"+pi);
+
+        //let a=10;
+        //let b=5;
+        //let add=a+b;
+        //let sub=a-b;
+        //let mult=a*b;
+        //let divi=a/b;
+        // let mod=a%b;
+        //  let expo=a**b;
+        //   console.log("add:"+add);
+        // console.log("sub:"+sub);
+        //  console.log("sub:"+mult);
+        // console.log("sub:"+divi);
+
+        //relational;
+        //  let c=10;
+        //let d=20;
+        //  console.log("greater+"+ c>d );
+        //console.log("less:"+ c<d);
+        //    console.log("less equal:"+c<=d);
+        //    console.log("greater equtal:"+c>=d);
+        //  console.log("equal:"+c==d);
+        //   console.log("strict equal:"+c===d);
+        // console.log("notequal:"+c!=d);
+        // console.log("strict not equal:"+c!==d);
+        //logical operators
+        // console.log("and:"+c>d && d==c);
+        // console.log("or:"+ d>c||d==c);
+        // console.log("not:"+!c<10);
+
+
+        // number 0
+        //   string ""
+        //  boolean false
+        //  null undefined
+
+        //  let x = 10;
+        //  if (x) {
+        //     console.log("true")
+        //  }
+        //   else {
+        //      console.log("false")
+        //  }
+
+        //   let x=10;
+        //  if (x>0){
+        //    console.log("positive value:"+x);
+        //  }
+        //  else if(x<0){
+        //    console.log("negative:"+x);
+        //  }
+        //  else{
+        //    console.log("zero:"+x);
+        //  }
+
+        //  for (let i = 1; i <= 10; i++) {
+        //   console.log(i);
+        //}
+
+        //  let arr = [1, 13, 25, 59]
+        //   for (let i = 0; i < arr.length; i++) {
+        //      console.log(arr[i])
+        //  }
+
+        //   let person={
+        //        name:"janani",
+        //       age:19,
+        //  phone:9944,
+        //     hobbies:["dancing","writing"],
+        //  parent_details:{
+        //     mom:"pappu",
+        //     dad:"ram",
+        //  }
+        //}
+        //  console.log(person.age)
+        //   console.log(person["age"])
+        //  console.log(person.parent_details.dad)
+        //  console.log(person.parent_details["dad"])
+        //  console.log(person.hobbies["1"])
+
+        //function declaration
+
+        // function add(a,b){
+        //     return a+b
+        // }
+        // console.log(add(2,3))
+
+
+        //function
+        // function fullname(fname, lname){
+        //             return "mr." + fname + lname
+        //         }
+        //         console.log(fullname("ram", "kumar"))
+
+
+        //arrow function
+        // let add = (a, b) => {
+        //     return a + b
+        // }
+
+        // let sub = (a, b) => {
+        //     return a - b
+        // }
+        // // console.log(add(2,3))
+
+
+        // //callback function
+        // function calc(callbackfunction, a, b) {
+        //     console.log(callbackfunction(a, b))
+        // }
+        // calc(add, 2, 3)
+        // calc(sub, 3, 2)
+
+
+        // //ex
+
+        // let he =(fname,lname)=>{
+        //     return "mr."+fname+lname
+        // }
+        //  let she =(fname,lname)=>{
+        //     return "ms."+fname+lname
+        // }
+        // function calc(callbackfunction, he, she) {
+        //     console.log(callbackfunction(he, she))
+        // }
+        // calc(he,"ram","kumar")
+        // calc(she, "sree", "harini")
+
+
+        //map | filter | reduce
+        let people=[
+            {id:1,name:"ram",age:23,gender:"m"},
+            {id:2,name:"arjun",age:13,gender:"m"},
+            {id:3,name:"shree",age:30,gender:"f"},
+            {id:4,name:"sam",age:33,gender:"f"},
+            {id:5,name:"rakzu",age:43,gender:"f"},
+            {id:6,name:"sree",age:53,gender:"f"},
+        ]
+
+        let total=people.reduce((temp,val)=>temp+val.age,100)
+        console.log(total)
+       // let filtered_list=people.filter((val)=>val.gender==="f")
+       // console.log(filtered_list)
+        
+        // let filtered_age=people.filter((val)=>val.age<30)
+        // console.log(filtered_age)
+
+        // let modified_list=people.map((val)=>{
+        //     val.name="dr."+val.name
+        //     val.age=val.age-1
+        //     if(val.gender=="m"){
+        //         val.name="mr."+val.name
+        //     }
+        //     else{
+        //         val.name="ms."+val.name
+        //     }
+        //     return val
+        // })
+        // console.log(modified_list)
+
+    </script>
+</body>
+
+</html>
