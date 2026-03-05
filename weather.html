@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>document</title>
+  <style>
+    .flex {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      border: 2px solid rgb(235, 10, 10);
+      border-radius: 20px;
+      padding: 10px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      border: 3px solid rgb(13, 13, 0);
+      border-radius: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex">
+    <div>
+      <h1 id="name"></h1>
+      <h2 id="region"></h2>
+      <p id="temp"></p>
+      <p id="humidity"></p>
+    </div>
+    <div>
+      <img id="icon" src="" alt="weather icon" />
+    </div>
+  </div>
+  <script>
+    fetch("https://api.weatherapi.com/v1/current.json?q=new work&key=82d566ea49e145e8b0592343260403")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("icon").setAttribute("src", data.current.condition.icon)
+        document.getElementById("name").textContent = data.location.name
+        document.getElementById("region").textContent = data.location.region + ", " + data.location.country
+        document.getElementById("temp").textContent = "temperature : " + data.current.temp_c
+        document.getElementById("humidity").textContent = "humidity : " + data.current.humidity
+        console.log(data)
+      }
+    )
+  </script>
+</body>
+
+</html>
